@@ -5,8 +5,6 @@
     const allOwners = _.map(repos, 'owner');
     const owners = _.uniqBy(allOwners, 'id');
 
-    console.log(owners);
-
     displayOwners(owners);
   });
 })(jQuery, _, displayOwners);
