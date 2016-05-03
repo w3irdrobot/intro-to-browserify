@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Github Repo Owners</title>
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Some Github Owners...</h1>
+    <div id="owners"></div>
+  </div>
+
+  <script type="text/x-handlebars-template" id="ownerTemplate">
+    <div class="owner clearfix">
+      <div class="image-container">
+        <img src="{{ avatar_url }}">
+      </div>
+      <h2>{{ login }}</h2>
+      <p>
+        <a href="{{ html_url }}">Github Home Page</a>
+      </p>
+    </div>
+  </script>
+
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.11.2/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
+  <script src="/display_owners.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

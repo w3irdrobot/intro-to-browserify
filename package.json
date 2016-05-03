@@ -1,0 +1,22 @@
+{
+  "name": "intro-to-browserify",
+  "version": "1.0.0",
+  "description": "The companion code for the course \"Intro to Browserify.\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/searsaw/intro-to-browserify.git"
+  },
+  "author": "Alex Sears <alexwsears@gmail.com> (http://alexsears.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/searsaw/intro-to-browserify/issues"
+  },
+  "homepage": "https://github.com/searsaw/intro-to-browserify#readme",
+  "devDependencies": {
+    "lite-server": "^2.2.0"
+  }
+}
