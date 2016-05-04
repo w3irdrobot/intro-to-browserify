@@ -1,4 +1,4 @@
-window.displayOwners = (function(_) {
+window.displayOwners = (function($, _, Handlebars) {
   const ownerContainer = $('#owners');
   const ownerSource = $('#ownerTemplate').html();
   const ownerTemplate = Handlebars.compile(ownerSource);
@@ -9,4 +9,4 @@ window.displayOwners = (function(_) {
       ownerContainer.append(ownerCompiled);
     });
   };
-})(_);
+})(jQuery, _, Handlebars);
