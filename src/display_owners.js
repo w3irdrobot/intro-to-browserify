@@ -1,14 +1,8 @@
-import $ from 'jQuery';
 import _ from 'lodash';
-import Handlebars from 'handlebars';
+import ownerTemplate from './owner_template.hbs';
 
-const ownerContainer = $('#owners');
-const ownerSource = $('#ownerTemplate').html();
-const ownerTemplate = Handlebars.compile(ownerSource);
+const ownerContainer = document.getElementById('owners');
 
 export default owners => {
-  _.forEach(owners, owner => {
-    const ownerCompiled = ownerTemplate(owner);
-    ownerContainer.append(ownerCompiled);
-  });
+  ownerContainer.innerHTML += _.map(owners, ownerTemplate).join('');
 };
