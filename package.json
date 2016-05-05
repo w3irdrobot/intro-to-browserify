@@ -7,6 +7,14 @@
     "type": "git",
     "url": "git+https://github.com/searsaw/intro-to-browserify.git"
   },
+  "scripts": {
+    "build:vendor": "browserify -r lodash -r http -p [ minifyify --no-map ] > build/vendor.bundle.js",
+    "build:app": "browserify -x lodash -x http -t babelify -t hbsfy -p [ minifyify --no-map ] src/app.js > build/app.bundle.js",
+    "build": "npm run build:vendor && npm run build:app",
+    "watch:app": "watchify src/app.js -x lodash -x http -t babelify -t hbsfy -o build/app.bundle.js",
+    "preserve": "npm run build:vendor",
+    "serve": "concurrently \"npm run watch:app\" \"lite-server\""
+  },
   "author": "Alex Sears <alexwsears@gmail.com> (http://alexsears.com)",
   "license": "MIT",
   "bugs": {
